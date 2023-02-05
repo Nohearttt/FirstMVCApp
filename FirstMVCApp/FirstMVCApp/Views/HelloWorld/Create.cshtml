@@ -1,0 +1,27 @@
+﻿@model DogViewModel;
+
+<div class="row">
+    <hr />
+    <div class="col-6"> 
+        <div class="card">
+            <div class="card-header">
+                <h2>Create a new Dog</h2>
+            </div>
+            <div class="card-body"> 
+                <form asp-controller="HelloWorld" asp-action="CreateDog" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Dog Name</label>
+                        <input asp-for="Name" type="text" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Dog Age</label>
+                        <input asp-for="Age" type="number" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit" >Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
